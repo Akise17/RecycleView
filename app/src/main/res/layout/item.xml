@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Step Kedua RecyclerView -->
+<!--Buat file layout xml ini -->
+<!--didalam file ini merupakan layout untuk tampilan/susunan item di RecyclerView-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/contact_image"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:src="@drawable/yuklogo"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"/>
+
+    <TextView
+        android:id="@+id/contact_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Kontak"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_margin="4dp"
+        android:layout_toRightOf="@id/contact_image"/>
+
+    <TextView
+        android:id="@+id/last_message"
+        android:layout_below="@id/contact_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pesan Terakhir"
+        android:textSize="20sp"
+        android:layout_margin="4dp"
+        android:layout_toRightOf="@id/contact_image"/>
+</RelativeLayout>
+    <!--Step Kedua RecyclerView -->
