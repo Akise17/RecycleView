@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
         itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
         itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
+        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.mipmap.ic_launcher_round));
         /*  Step Ketiga RecyclerView*/
 
         /*  Step Keempat RecyclerView: findViewById-kan RecyclerView */
