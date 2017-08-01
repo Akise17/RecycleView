@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Log.d(TAG, "App Started");
+
         /*  Step Ketiga RecyclerView
         Buat Kumpulan data
         2. Buat data seperti dibawah*/

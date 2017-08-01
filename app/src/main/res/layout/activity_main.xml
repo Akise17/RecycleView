@@ -20,7 +20,14 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <!--Step Pertama RecyclerView Buat Element di Layout Utama-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </RelativeLayout>
+
+     <!--Step Pertama RecyclerView Buat Element di Layout Utama-->
     <RelativeLayout
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_width="match_parent"
@@ -29,9 +36,7 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycle_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </android.support.v7.widget.RecyclerView>
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
 
 
     </RelativeLayout>
