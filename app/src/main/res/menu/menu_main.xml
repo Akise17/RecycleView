@@ -4,7 +4,7 @@
     tools:context="id.yuktanding.recycleview.MainActivity">
     <item
         android:id="@+id/action_new"
-        android:icon="@android:drawable/ic_menu_share"
+        android:icon="@android:drawable/ic_menu_search"
         android:iconTint="@color/colorAccent"
         android:orderInCategory="100"
         app:showAsAction="always" />
