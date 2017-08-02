@@ -21,8 +21,11 @@ import java.util.ArrayList;
  */
     /*  2. extends RecyclerView.Adapter<NamaAdapter.NamaViewHolder>*/
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder>{
-    private static final String TAG = ItemAdapter.class.getSimpleName();
-    public static final String MESSAGE = "MESSAGE";
+    private static final String TAG = "Android Debug";
+    public static final String PROFILE = "PROFILE";
+    public static final String NAMA = "NAMA";
+//    public static final String PROFILE = "PROFILE";
+//    public static final String PROFILE = "PROFILE";
     /*  2. extends RecyclerView.Adapter*/
 
     /*  3. Buat Variabel untuk menyimpan data dari activity utama*/
@@ -44,7 +47,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder>{
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, final int position) {
+    public void onBindViewHolder(final MyViewHolder holder, final int position) {
         // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
         item item2 = items.get(position);
         holder.name.setText(item2.getNama());
@@ -56,8 +59,16 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder>{
 
             @Override
             public void onClick(View view) {
-                Log.d("adapter","onClick "+position);
-                nextScreen(position);
+                Log.d(TAG,"onClick "+position);
+                //==============================================================
+                //untuk
+                Intent intent = new Intent(context,NextScreen.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.putExtra("ITM",items.get(position));
+
+
+                Log.d(TAG,"kirim posisi "+ position);
+                context.startActivity(intent);
             }
         });
 
@@ -92,18 +103,12 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder>{
     /*  5. Buat class nama ViewHolder*/
 
     public ItemAdapter(ArrayList<item> itemArrayList, Context context){
-        Log.d("ItemAdapter", "didalam public ItemAdapter");
+        Log.d(TAG, "didalam public ItemAdapter");
         this.items = itemArrayList;
         this.context = context;
     }
 
-    public void nextScreen(int n){
-        Intent intent = new Intent(context,NextScreen.class);  //yang ini
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        intent.putExtra(MESSAGE,""+n);
-        Log.d(TAG,"kirim posisi "+n);
-        context.startActivity(intent);
-    }
+
 }
 
 /*  Step Ketujuh RecyclerView: Buat Class Adapter untuk RecyclerView*/

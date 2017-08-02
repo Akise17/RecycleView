@@ -53,13 +53,13 @@ public class MainActivity extends AppCompatActivity {
         Buat Kumpulan data
         2. Buat data seperti dibawah*/
         itemArrayList = new ArrayList<>();
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
+        itemArrayList.add(new item("Jambu", "Hai aku suka jambu", R.drawable.yuklogo));
+        itemArrayList.add(new item("Klutuk", "Hai aku juga sama kayak jambu", R.drawable.yuklogo));
+        itemArrayList.add(new item("Sampo", "Sampoan setelah baca niat", R.drawable.yuklogo));
+        itemArrayList.add(new item("Sabun", "nyabun kemudian menyesal", R.drawable.yuklogo));
+        itemArrayList.add(new item("Petis", "Rasanya enak banget", R.drawable.yuklogo));
+        itemArrayList.add(new item("Lontong", "Panjang dan Padat", R.drawable.yuklogo));
+        itemArrayList.add(new item("Pepaya", "Gede dan Ranum", R.drawable.yuklogo));
         itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
         itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
         itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
