@@ -54,15 +54,9 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder>{
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("Adapter", "Clicked " + position);
+                Log.d("Adapter", "Clicked Position: " + position);
+                nextScreen(position);
 
-                switch (position){
-                    case 0:
-                        nextScreen();
-                        break;
-                    default: break;
-
-                }
             }
         });
 
@@ -70,6 +64,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder>{
             @Override
             public void onClick(View view) {
                 Log.d("Adapter", "Profile Clicked " + position);
+                profileScreen(position);
             }
         });
     }
@@ -101,10 +96,17 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder>{
         this.context = context; // Tambah Context karena class ini tidak memiliki Contex
     }
 
-    public void nextScreen(){
+    public void nextScreen(int position){
         Intent intent = new Intent(context, NextScreen.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        Log.d("Item Adapter", "Open Next Screen");
+        Log.d("Item Adapter", "Open Next Screen: " + position);
+        context.startActivity(intent);
+    }
+
+    public void profileScreen(int position){
+        Intent intent = new Intent(context, ProfileScreen.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        Log.d("Item Adapter", "Open Profile Screen: " + position);
         context.startActivity(intent);
     }
 }

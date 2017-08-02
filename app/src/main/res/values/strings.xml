@@ -3,4 +3,6 @@
     <string name="action_settings">Settings</string>
     <string name="faq">FAQ</string>
     <string name="logout">Logout</string>
+    <string name="title_activity_next_screen">NextScreen</string>
+    <string name="title_activity_profile_screen">ProfileScreen</string>
 </resources>
