@@ -5,6 +5,7 @@ package id.yuktanding.recycleview;
 
 import android.content.ClipData;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
  */
     /*  2. extends RecyclerView.Adapter<NamaAdapter.NamaViewHolder>*/
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder>{
+
     /*  2. extends RecyclerView.Adapter*/
 
     /*  3. Buat Variabel untuk menyimpan data dari activity utama*/
@@ -38,13 +40,20 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder>{
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(MyViewHolder holder, final int position) {
         // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
         item item2 = items.get(position);
         holder.name.setText(item2.getNama());
         holder.lastMesage.setText(item2.getPesan_terakhir());
         holder.profile.setImageResource(item2.getIdImage());
         // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("Adapter", "Clicked " + position);
+            }
+        });
     }
 
     @Override //pengulangan sebanyak data yang terdapat di arraylist
