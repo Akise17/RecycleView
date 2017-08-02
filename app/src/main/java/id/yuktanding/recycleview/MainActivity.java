@@ -17,6 +17,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
 
+
     /*  Step Ketiga RecyclerView: Buat Kumpulan data      */
 
     ArrayList<item> itemArrayList; //1. Buat Variabel Array list
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         /*  Step Keenam RecyclerView: setLayoutManager ke recycleView*/
 
         /*  Step Kedelapan RecyclerView: buat objek dari adapter yang telah dibuat*/
-        ItemAdapter itemAdapter = new ItemAdapter(itemArrayList);
+        ItemAdapter itemAdapter = new ItemAdapter(itemArrayList,this);
         /*  Step Kedelapan RecyclerView: buat objek dari adapter yang telah dibuat*/
 
         /*  Step Kesembilan RecyclerView: Set objek adapter yang sudah dibuat*/

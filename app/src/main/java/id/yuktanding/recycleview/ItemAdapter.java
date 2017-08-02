@@ -4,6 +4,8 @@ package id.yuktanding.recycleview;
 /*  1. Buat Class ItemAdapter*/
 
 import android.content.ClipData;
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,10 +22,12 @@ import java.util.ArrayList;
     /*  2. extends RecyclerView.Adapter<NamaAdapter.NamaViewHolder>*/
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder>{
     private static final String TAG = ItemAdapter.class.getSimpleName();
+    public static final String MESSAGE = "MESSAGE";
     /*  2. extends RecyclerView.Adapter*/
 
     /*  3. Buat Variabel untuk menyimpan data dari activity utama*/
     private ArrayList<item> items;
+    private Context context;
     /*  3. Buat Variabel untuk menyimpan data dari activity utama*/
 
 
@@ -53,6 +57,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder>{
             @Override
             public void onClick(View view) {
                 Log.d("adapter","onClick "+position);
+                nextScreen(position);
             }
         });
 
@@ -62,6 +67,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder>{
                 Log.d(TAG,"profile " + position);
             }
         });
+
     }
 
     @Override //pengulangan sebanyak data yang terdapat di arraylist
@@ -85,8 +91,18 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder>{
     }
     /*  5. Buat class nama ViewHolder*/
 
-    public ItemAdapter(ArrayList<item> itemArrayList){
+    public ItemAdapter(ArrayList<item> itemArrayList, Context context){
+        Log.d("ItemAdapter", "didalam public ItemAdapter");
         this.items = itemArrayList;
+        this.context = context;
+    }
+
+    public void nextScreen(int n){
+        Intent intent = new Intent(context,NextScreen.class);  //yang ini
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra(MESSAGE,""+n);
+        Log.d(TAG,"kirim posisi "+n);
+        context.startActivity(intent);
     }
 }
 
