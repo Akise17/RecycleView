@@ -6,17 +6,13 @@
     android:layout_height="match_parent"
     tools:context="id.yuktanding.recycleview.MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="20">
+
 
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:theme="@style/AppTheme.AppBarOverlay"
-            android:layout_weight="9">
+>
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -27,12 +23,17 @@
 
         </android.support.design.widget.AppBarLayout>
 
+    <LinearLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
         <!--Step Pertama RecyclerView Buat Element di Layout Utama-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            android:layout_weight="2">
+           >
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recycle_view"
@@ -45,8 +46,8 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="9">
+            android:layout_height="wrap_content"
+            >
 
             <Button
                 android:id="@+id/btn_send"

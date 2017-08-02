@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<item> itemArrayList; //1. Buat Variabel Array list
 
     /*  Step Ketiga RecyclerView*/
+    private int i=0;
+    private static String[] dataNama = {"Akise1","Akise2","Lontong"};
 
 
     /*  Step Keempat RecyclerView: findViewById-kan RecyclerView */
@@ -51,25 +53,31 @@ public class MainActivity extends AppCompatActivity {
         /*  Step Ketiga RecyclerView
         Buat Kumpulan data
         2. Buat data seperti dibawah*/
+//        dataNama[2]="Petis";
         itemArrayList = new ArrayList<>();
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
-        itemArrayList.add(new item("Akise", "Terimakasih Untuk Segalanya", R.mipmap.ic_launcher_round));
+        for (String nama:dataNama){
+            itemArrayList.add(new item(""+dataNama[i], "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
+            i++;
+            Log.d(TAG, nama);
+        }
+
+//        itemArrayList.add(new item("Akise2", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
+//        itemArrayList.add(new item("Akise3", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
+//        itemArrayList.add(new item("Akise4", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
+//        itemArrayList.add(new item("Akise5", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
+//        itemArrayList.add(new item("Akise6", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
+//        itemArrayList.add(new item("Akise7", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
+//        itemArrayList.add(new item("Akise8", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
+//        itemArrayList.add(new item("Akise9", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
+//        itemArrayList.add(new item("Akise10", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
+//        itemArrayList.add(new item("Akise11", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
+//        itemArrayList.add(new item("Akise12", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
+//        itemArrayList.add(new item("Akise13", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
+//        itemArrayList.add(new item("Akise14", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
+//        itemArrayList.add(new item("Akise15", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
+//        itemArrayList.add(new item("Akise16", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
+//        itemArrayList.add(new item("Akise17", "Terimakasih Untuk Segalanya", R.drawable.yuklogo));
+//        itemArrayList.add(new item("Akise18", "Terimakasih Untuk Segalanya", R.mipmap.ic_launcher_round));
         /*  Step Ketiga RecyclerView*/
 
         /*  Step Keempat RecyclerView: findViewById-kan RecyclerView */

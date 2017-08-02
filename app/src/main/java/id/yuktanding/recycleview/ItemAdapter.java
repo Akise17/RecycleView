@@ -24,6 +24,9 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder>{
     /*  2. extends RecyclerView.Adapter*/
 
     private Context context;
+    public static final String PROFIL = "PROFIL";
+    public static final String NAMA = "NAMA";
+    public static final String PESAN = "PESAN";
 
     /*  3. Buat Variabel untuk menyimpan data dari activity utama*/
     private ArrayList<item> items;
@@ -99,6 +102,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder>{
     public void nextScreen(int position){
         Intent intent = new Intent(context, NextScreen.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra("ITM", items.get(position));
         Log.d("Item Adapter", "Open Next Screen: " + position);
         context.startActivity(intent);
     }
@@ -106,6 +110,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder>{
     public void profileScreen(int position){
         Intent intent = new Intent(context, ProfileScreen.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
         Log.d("Item Adapter", "Open Profile Screen: " + position);
         context.startActivity(intent);
     }
