@@ -126,6 +126,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_logout:
                 Log.d(TAG, "Logout");
                 return true;
+            case R.id.action_notif:
+                Log.d(TAG, "notification");
+                return true;
             default: break;
         }
 

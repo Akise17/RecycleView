@@ -29,6 +29,8 @@ public class NextScreen extends AppCompatActivity {
         txtMessage.setText(item.getPesan_terakhir());
         txtNama.setText(item.getNama());
 
+
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
